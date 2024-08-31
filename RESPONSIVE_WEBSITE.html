@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ProDigy Infotech</title>
+  <style>
+    /* Basic Reset */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    /* Body Style */
+    body {
+      font-family: 'Arial', sans-serif;
+      line-height: 1.6;
+      overflow-x: hidden;
+      background-color: #f7f8fa;
+    }
+
+    /* Navigation Bar Styling */
+    #navbar {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      background-color: #0073e6; /* Attractive Blue */
+      color: #fff;
+      padding: 1rem;
+      z-index: 1000;
+      transition: background-color 0.3s ease, box-shadow 0.3s ease;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    }
+
+    #navbar.scrolled {
+      background-color: #005bb5; /* Darker shade on scroll */
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    }
+
+    .container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .logo {
+      font-size: 1.8rem;
+      font-weight: bold;
+      text-decoration: none;
+      color: #fff;
+    }
+
+    /* Menu Styling */
+    .nav-menu {
+      list-style: none;
+      display: flex;
+      gap: 2rem;
+    }
+
+    .nav-menu li {
+      position: relative;
+    }
+
+    .nav-menu a {
+      text-decoration: none;
+      color: #fff;
+      font-size: 1rem;
+      padding: 0.5rem;
+      transition: color 0.3s ease, background-color 0.3s ease;
+    }
+
+    .nav-menu a:hover {
+      color: #0073e6;
+      background-color: #fff;
+      border-radius: 5px; /* Rounded corners on hover */
+    }
+
+    /* Section Styling */
+    .section {
+      height: 100vh;
+      padding: 2rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      font-size: 2rem;
+      background-color: #e0e7ff; /* Light Blue Background */
+      border-bottom: 1px solid #ddd;
+    }
+  </style>
+</head>
+<body>
+  <!-- Navigation Menu -->
+  <header id="navbar">
+    <div class="container">
+      <a href="#" class="logo">ProDigy Infotech</a>
+      <nav>
+        <ul class="nav-menu">
+          <li><a href="#home">Home</a></li>
+          <li><a href="#about">About Us</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#portfolio">Portfolio</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Content Sections -->
+  <section id="home" class="section">Home Section</section>
+  <section id="about" class="section">About Us Section</section>
+  <section id="services" class="section">Services Section</section>
+  <section id="portfolio" class="section">Portfolio Section</section>
+  <section id="contact" class="section">Contact Section</section>
+
+  <script>
+    // Change the navbar color on scroll
+    window.addEventListener('scroll', function() {
+      const navbar = document.getElementById('navbar');
+      if (window.scrollY > 50) {
+        navbar.classList.add('scrolled');
+      } else {
+        navbar.classList.remove('scrolled');
+      }
+    });
+  </script>
+</body>
+</html>
